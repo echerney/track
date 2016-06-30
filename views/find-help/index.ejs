@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include ../partials/head %>
+</head>
+<body>
+<% include ../partials/header %>
+  <h1>
+  Find help!
+    <% if(user){ %>
+    Welcome, <%= user.fname %> <%= user.lname %>
+    <% } else { %>
+    Welcome, Guest
+    <% } %>
+  </h1>
+  <input type="text" placeholder="zip code">
+  <button id="submit-zip">submit</button>
+</body>
+</html>

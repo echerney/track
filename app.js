@@ -6,6 +6,7 @@ const logger          = require('morgan');
 const bodyParser      = require('body-parser');
 const homeRoute       = require('./routes/home');
 const userRoute       = require('./routes/user');
+const helpRoute       = require('./routes/find-help');
 const assessRoute     = require('./routes/assessment');
 const methodOverride  = require('method-override');
 const session         = require('express-session');
@@ -34,5 +35,6 @@ app.listen(port, function(){
 
 //ROUTES
 app.use('/', homeRoute);
-app.use('/user', userRoute)
-app.use('/assess', assessRoute)
+app.use('/user', userRoute);
+app.use('/assess', assessRoute);
+app.use('/help', helpRoute);

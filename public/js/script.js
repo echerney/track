@@ -18,31 +18,54 @@ $(document).ready(function() {
     let val3 = parseInt($('#assess3').val());
     let val4 = parseInt($('#assess4').val());
     let score = val1 + val2 + val3 + val4
-    fillModal();
+    //checkFlags();
+    getScore();
+    console.log(getScore())
+    // fillModal();
     $('.modal').toggle();
   })
 
 
+  function checkFlags() {
+    //if SI or HI marks or score is high are checked, send to find help page
+  }
+
+  function checkMarkers() {
+//
+  }
+
+  function getScore(){
+    let score = $('.marked').length
+    return score
+  }
+
   //conditionals to fill modal with content
   function fillModal(){
-    if($('#assess1').val() == 1){
-      $('#box1').text('box1')
-    };
-    if($('#assess2').val() == 1){
-      $('#box2').text('box2')
-    };
-    if($('#assess3').val() == 1){
-      $('#box3').text('box3')
-    };
-    if($('#assess4').val() == 1){
-      $('#box4').text('box4')
-    };
+    if (getScore() == 0){
+      //modal will tell you that you're the happeist person to ever person
+    }
+    if (getScore() < 10){
+      //modal will have mindfulness exercises at random
+    }
+    if (getScore() < 20){
+      //checkMarkers()
+    }
+    if (getScore < 25){
+      //go to find help page
+    }
   }
 
 
   $('#close-modal').click(function(){
       $('#modal-bg').hide();
   });
+
+
+  $('.bubble').click(function(){
+
+    let toggleMarked = $(this).toggleClass('marked');
+  })
+
 
 });
 
