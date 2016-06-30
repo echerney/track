@@ -1,0 +1,35 @@
+{
+  "name": "sadtracker",
+  "version": "1.0.0",
+  "description": "Keep track of your symptoms and get help when you need it!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echerney/track.git"
+  },
+  "keywords": [
+    "depression",
+    "health-care",
+    "mental-health"
+  ],
+  "author": "Erin Cherney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/echerney/track/issues"
+  },
+  "homepage": "https://github.com/echerney/track#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-session": "^1.13.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.1.18",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
+}

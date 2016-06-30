@@ -1,0 +1,40 @@
+body {
+  background-color: azure;
+  text-align: center;
+  font-family: helvetica;
+}
+
+#navbar {
+  text-align: right;
+  background-color: thistle;
+  width: 100%;
+  height: 40px;
+}
+ul {
+  display: inline;
+}
+
+
+li {
+  list-style: none;
+  display: inline;
+  float: right;
+  margin: 10px;
+}
+
+.nav-hide {
+  display: none;
+}
+
+#show-nav:hover {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

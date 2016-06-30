@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head %>
+<body>
+<% include ../partials/header %>
+  <h1>
+<% if(user){ %>
+    Welcome, <%= user.fname %> <%= user.lname %>
+    <% } else { %>
+    Welcome, Guest
+    <% } %>
+  </h1>
+  <label for="">How do you feel?:</label>
+  <input type="text" name="score"><br>
+  <button>submit</button>
+</body>
+</html>
