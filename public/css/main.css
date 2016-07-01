@@ -10,6 +10,11 @@ body {
   font-family: helvetica;
 }
 
+section {
+  width:70%;
+}
+
+
 /*ASSESSMENT PAGE*/
 
 .bubble {
@@ -20,10 +25,9 @@ body {
   display: inline-block;
 }
 
-p {
-  margin: 30px ;
+.marked {
+  background-color: rgb(120,205,205);
 }
-
 
 #modal-bg {
   display:none;
@@ -37,7 +41,6 @@ p {
     background-color: rgba(0,0,0,0.4);
 }
 
-
 #modal-content {
     background-color: lavender;
     margin: 40px auto;
@@ -47,45 +50,53 @@ p {
     height: 80%;
 }
 
-.marked {
-  background-color: teal;
-}
-
 
 
 
 /*NAVBAR STUFF*/
+
 #navbar {
-  text-align: right;
-  background-color: teal;
-  width: 100%;
-  height: 40px;
-}
-ul {
-  display: inline;
+height: 100%;
+position: absolute;
+width: 30%;
+background-color: rgb(120,205,205);
+right: 0;
 }
 
-
-li {
-  list-style: none;
-  display: inline;
-  float: right;
-  margin: 10px;
+.intro {
+  display:inline;
 }
 
 .nav-hide {
   display: none;
+  margin: 5px;
 }
 
-#show-nav:hover {
-  color: white;
-}
-
-a:hover {
-  color: white;
+.nav-input {
+  height: 20px;
+  border-radius: 8%;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.nav-button{
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 55px;
+  width: 60%;
+  font-size:17px;
+  border-radius: 8%;
+  margin: 20px auto;
+}
+
+.nav-button:hover{
+  background-color: lightgray;
+}
+
+.nav-label{
+  color: darkslategray;
 }

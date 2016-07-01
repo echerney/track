@@ -5,8 +5,8 @@ $(document).ready(function() {
 //NAVBAR
   //toggle function to hide login until button pressed
   $('#show-nav').click(function(){
-    $('.nav-hide').toggle();
-    $('#show-nav').toggle();
+    $('.nav-hide').fadeIn();
+    $('#show-nav').hide();
   })
 
 
@@ -110,9 +110,19 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'json',
       data: {zip: zipInput},
-    })
-    .done(function(data) {
-      console.log(data[0].zip);
+      success: function(data){
+        const $body = $('body');
+        let $div = $('<div>');
+        data.forEach(function(facility){
+          let $name1 = $('<h3>').text(facility.name_1);
+          $div.append($name1);
+          let $name2 = $('<p>').text(facility.name_2);
+          $div.append($name2);
+          let $city = $('<p>').text(facility.city);
+          $div.append($city);
+        });
+        $body.append($div);
+      }
     })
   })
 
