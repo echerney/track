@@ -64,21 +64,37 @@ $(document).ready(function() {
   $('.bubble').click(function(){
     let clickedRow = this.classList[1]
     let clickedColumn = this.classList[2]
-    if(clickedColumn === 'c1') {
-      $('.'+clickedRow).removeClass('marked');
-      $(this).toggleClass('marked');
-      $('.'+clickedRow).addClass('animated pulse')
-    }
-    if(clickedColumn === 'c2' ){
-      $('.'+clickedRow).removeClass('marked');
-      $(this).toggleClass('marked');
-      $('.'+clickedRow+'.c1').toggleClass('marked');
-    }
+
     if(clickedColumn === 'c3' ){
       $('.'+clickedRow).removeClass('marked');
       $(this).toggleClass('marked');
       $('.'+clickedRow+'.c1').toggleClass('marked');
       $('.'+clickedRow+'.c2').toggleClass('marked');
+      $('.'+clickedRow).addClass('animated pulse')
+      window.setTimeout(function(){
+        $('.'+clickedRow).removeClass('animated pulse')},
+       2000);
+    }
+
+    if(clickedColumn === 'c2' ){
+      $('.'+clickedRow).removeClass('marked');
+      $(this).toggleClass('marked');
+      $('.'+clickedRow+'.c1').toggleClass('marked');
+      $('.'+clickedRow).addClass('animated pulse')
+      window.setTimeout(function(){
+        $('.'+clickedRow).removeClass('animated pulse')},
+       2000);
+    }
+
+    if(clickedColumn === 'c1' && $(this).hasClass('marked') === true) {
+      $('.'+clickedRow).removeClass('marked');
+    } else if(clickedColumn === 'c1' && $(this).hasClass('marked') === false) {
+      $('.'+clickedRow).removeClass('marked');
+      $(this).toggleClass('marked');
+      $('.'+clickedRow).addClass('animated pulse')
+      window.setTimeout(function(){
+        $('.'+clickedRow).removeClass('animated pulse')},
+       2000);
     }
     console.log(clickedRow)
     console.log(clickedColumn)
