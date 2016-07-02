@@ -23,7 +23,7 @@ router.post('/login', loginUser, function(req, res) {
   req.session.user = res.user;
   req.session.save(function(err){
     if(err) throw err
-    res.redirect('/');
+    res.redirect('/assess');
   });
 });
 

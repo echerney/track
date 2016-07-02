@@ -2,6 +2,7 @@
 
 * {
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -15,14 +16,28 @@ section {
 }
 
 
+
+/*HOME PAGE*/
+.greeting {
+  padding: 80px;
+  font-size: 40px;
+}
+
+.intro {
+  margin: 0 60px;
+  /*display:inline;
+*/}
+
+
 /*ASSESSMENT PAGE*/
 
 .bubble {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   border: black 2px solid;
   display: inline-block;
+  margin: -12px 3px 5px 3px;
 }
 
 .marked {
@@ -42,7 +57,7 @@ section {
 }
 
 #modal-content {
-    background-color: lavender;
+    background-color: rgb(224,245,245);
     margin: 40px auto;
     padding: 20px;
     border: 1px solid black;
@@ -50,21 +65,67 @@ section {
     height: 80%;
 }
 
+.help-button{
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 55px;
+  width: 150px;
+  font-size:17px;
+  border-radius: 8%;
+  margin: 20px;
+}
 
+#close-modal{
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  font-size:17px;
+  height: 35px;
+  width: 75px;
+  border-radius: 8%;
+  margin: 20px;
+}
 
+.title{
+  font-size: 30px;
+  padding: 40px 0 20px 0;
+}
+
+main p {
+  margin: 20px;
+}
+
+#assess-submit{
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 45px;
+  width: 80px;
+  font-size:17px;
+  border-radius: 8%;
+  margin: 20px;
+}
+
+.instructions {
+  font-weight: bolder;
+}
+
+.inst-box {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(120,205,205, 0.3);
+  margin-top: 10px;
+}
 
 /*NAVBAR STUFF*/
 
 #navbar {
-height: 100%;
-position: absolute;
+height: 100vh;
+position: fixed;
 width: 30%;
 background-color: rgb(120,205,205);
 right: 0;
-}
-
-.intro {
-  display:inline;
 }
 
 .nav-hide {
@@ -90,7 +151,12 @@ a {
   width: 60%;
   font-size:17px;
   border-radius: 8%;
-  margin: 20px auto;
+  margin: 20px;
+}
+
+.login{
+  top:10px;
+  position: relative;
 }
 
 .nav-button:hover{
@@ -99,4 +165,10 @@ a {
 
 .nav-label{
   color: darkslategray;
+  font-weight: bolder;
+}
+
+#user-label {
+  margin: 40px;
+  font-family: 'Raleway Dots', cursive;
 }

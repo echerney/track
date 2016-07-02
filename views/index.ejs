@@ -4,17 +4,14 @@
 <% include partials/head %>
 </head>
 <body>
-<% include partials/header %>
+<% include partials/aside %>
   <section>
-    <h1>
-      <% if(user){ %>
-      Welcome, <%= user.fname %> <%= user.lname %>
-      <% } else { %>
+    <h1 class="greeting">
       Welcome to Tracker
-      <% } %>
     </h1>
     <article class="intro">
       <p>This is where the instructions will go as far as creating an account, what the app is for as well as a button for someone to find nearby mental health facilities.</p>
+      <a href="./help"><button class="help-button">Find Help</button></a>
     </article>
   </section>
 </body>
