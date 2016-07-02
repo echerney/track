@@ -11,60 +11,101 @@ $(document).ready(function() {
 
 
 //ASSESSMENTS
-  //calculate score
+  //on click, get the results of the assessment
   $('#assess-submit').click(function(){
-    // let val1 = parseInt($('#assess1').val());
-    // let val2 = parseInt($('#assess2').val());
-    // let val3 = parseInt($('#assess3').val());
-    // let val4 = parseInt($('#assess4').val());
-    // let score = val1 + val2 + val3 + val4
-    //checkFlags();
+    checkFlags();
     getScore();
     console.log(getScore())
-    // fillModal();
-    $('.modal').toggle();
+    fillModal();
+    // $('#modal-bg').toggle();
   })
 
-
+  //if the suicide or self harm bubbles have been filled, produce the help link in the model.
   function checkFlags() {
-    //if SI or HI marks or score is high are checked, send to find help page
+    if($('.flag').hasClass('marked')) {
+      produceHelpLink();
+    }
   }
 
+  //fill model with suggestion to seek help and a link to the find help page
+  function produceHelpLink() {
+    $('#modal-content').append(
+      "<p class='added'>It looks like you're having a really hard time right now. Please let us put you in touch with some mental health professionals to get you the help you need!</p> <a class='added' href='./help'><button class='help-button'>Find Help</button></a>"
+      );
+    $('#modal-bg').toggle();
+  }
+
+  //adds the close button to the model
+  function addModalButton() {
+    $('#modal-content').append('<button class="added" id="close-modal">close</button>');
+    $('#close-modal').click(function(){
+      $('#modal-bg').hide();
+  });
+  }
+
+  //shows model filled with suggestions dynamically created and dependent on answers given
   function checkMarkers() {
-//
+    if($('.twelfth').hasClass('marked')){
+      $('#modal-content').append(
+        '<p class="added">not eating</p>'
+        );
+    }
+    if($('.thirteenth').hasClass('marked')){
+      $('#modal-content').append(
+        '<p class="added">not sleeping</p>'
+        );
+    }
+    if($('.fourteenth').hasClass('marked')){
+      $('#modal-content').append(
+        '<p class="added">too much eating</p>'
+        );
+    }
+    if($('.fifteenth').hasClass('marked')){
+      $('#modal-content').append(
+        '<p class="added">too much sleeping</p>'
+        );
+    }
+    if($('.sixteenth').hasClass('marked')){
+      $('#modal-content').append(
+        '<p class="added">not clean</p>'
+        );
+    }
+    if($('#modal-content').children().length === 1) {
+      $('#modal-content').append(
+        '<p class="added">everything is going to be okay</p>'
+        );
+    }
+    addModalButton()
+    $('#modal-bg').toggle();
   }
 
+  //adds up number of bubbles filled in
   function getScore(){
+    $('.added').remove()
     let score = $('.marked').length
     return score
   }
 
   //conditionals to fill modal with content
   function fillModal(){
-    if (getScore() == 0){
+    if (getScore() < 5){
+      console.log('happy')
       //modal will tell you that you're the happeist person to ever person
-    }
-    if (getScore() < 10){
+    } else if (getScore() < 21){
+      console.log('mild')
       //modal will have mindfulness exercises at random
-    }
-    if (getScore() < 20){
-      //checkMarkers()
-    }
-    if (getScore < 25){
-      //go to find help page
+    } else if (getScore() < 36){
+      checkMarkers()
+      console.log('medium')
+    } else {
+      produceHelpLink();
     }
   }
 
-
-  $('#close-modal').click(function(){
-      $('#modal-bg').hide();
-  });
-
-
+  //filling bubbles
   $('.bubble').click(function(){
     let clickedRow = this.classList[1]
     let clickedColumn = this.classList[2]
-
     if(clickedColumn === 'c3' ){
       $('.'+clickedRow).removeClass('marked');
       $(this).toggleClass('marked');
@@ -75,7 +116,6 @@ $(document).ready(function() {
         $('.'+clickedRow).removeClass('animated pulse')},
        2000);
     }
-
     if(clickedColumn === 'c2' ){
       $('.'+clickedRow).removeClass('marked');
       $(this).toggleClass('marked');
@@ -85,7 +125,6 @@ $(document).ready(function() {
         $('.'+clickedRow).removeClass('animated pulse')},
        2000);
     }
-
     if(clickedColumn === 'c1' && $(this).hasClass('marked') === true) {
       $('.'+clickedRow).removeClass('marked');
     } else if(clickedColumn === 'c1' && $(this).hasClass('marked') === false) {
@@ -96,13 +135,13 @@ $(document).ready(function() {
         $('.'+clickedRow).removeClass('animated pulse')},
        2000);
     }
-    console.log(clickedRow)
-    console.log(clickedColumn)
-
   })
 
-//FIND HELP PAGES
 
+
+
+//HELP PAGE
+  //call to the api for specified zip code and populate list of places
   $('#submit-zip').click(function(){
     let zipInput = $('#zipcode').val();
     $.ajax({

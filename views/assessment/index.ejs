@@ -2,43 +2,91 @@
 <html>
 <% include ../partials/head %>
 <body>
-<% include ../partials/header %>
-  <h1>
-<% if(user){ %>
-    Welcome, <%= user.fname %> <%= user.lname %>
-    <% } else { %>
-    Welcome, Guest
-    <% } %>
-  </h1>
+<% include ../partials/aside %>
   <section>
-    <p>How do you feel?</p>
+  <h1 class="title">Assessment</h1>
+    <main>
+    <div class="inst-box"><p class="instructions">Read the statements below. Click on the bubble that best fits how you feel right now. 0 bubbles will correspond with disagreeing entirely while 3 bubbles will mean that you agree entirely.</p></div>
+    <p>I feel discouraged about the future, like things will never improve.</p>
     <div id="b1" class="bubble first c1"></div>
     <div id="b2" class="bubble first c2"></div>
     <div id="b3" class="bubble first c3"></div>
-    <p>How do you feel?</p>
+    <p>As I look back on my life, all I can see are my failures. </p>
     <div id="b4" class="bubble second c1"></div>
     <div id="b5" class="bubble second c2"></div>
     <div id="b6" class="bubble second c3"></div>
-    <p>How do you feel?</p>
+    <p>I find no enjoyment in things I used to enjoy.</p>
     <div id="b7" class="bubble third c1"></div>
     <div id="b8" class="bubble third c2"></div>
     <div id="b9" class="bubble third c3"></div>
-    <p>How do you feel?</p>
-    <div id="b10" class="bubble fourth c1"></div>
-    <div id="b12" class="bubble fourth c2"></div>
-    <div id="b13" class="bubble fourth c3"></div><br>
+    <p>I feel guilty all of the time, even for things that are not my fault.</p>
+    <div id="b7" class="bubble fourth c1"></div>
+    <div id="b8" class="bubble fourth c2"></div>
+    <div id="b9" class="bubble fourth c3"></div>
+    <p>I blame myself for everything bad that happens.</p>
+    <div id="b7" class="bubble fifth c1"></div>
+    <div id="b8" class="bubble fifth c2"></div>
+    <div id="b9" class="bubble fifth c3"></div>
+    <p>I cry all the time now, sometimes without provocation.</p>
+    <div id="b7" class="bubble sixth c1"></div>
+    <div id="b8" class="bubble sixth c2"></div>
+    <div id="b9" class="bubble sixth c3"></div>
+    <p>I have lost all interest in friends and other people. </p>
+    <div id="b7" class="bubble seventh c1"></div>
+    <div id="b8" class="bubble seventh c2"></div>
+    <div id="b9" class="bubble seventh c3"></div>
+    <p>I feel numb to emotions.</p>
+    <div id="b7" class="bubble eighth c1"></div>
+    <div id="b8" class="bubble eighth c2"></div>
+    <div id="b9" class="bubble eighth c3"></div>
+    <p>I can't do any work.</p>
+    <div id="b7" class="bubble ninth c1"></div>
+    <div id="b8" class="bubble ninth c2"></div>
+    <div id="b9" class="bubble ninth c3"></div>
+    <p>I get tired from doing almost anything.</p>
+    <div id="b7" class="bubble tenth c1"></div>
+    <div id="b8" class="bubble tenth c2"></div>
+    <div id="b9" class="bubble tenth c3"></div>
+    <p>I have great difficulty in making decisions, even those that are unimportant.</p>
+    <div id="b10" class="bubble eleventh c1"></div>
+    <div id="b12" class="bubble eleventh c2"></div>
+    <div id="b13" class="bubble eleventh c3"></div>
+    <p>I have trouble convincing myself to eat and am missing meals because of it.</p>
+    <div id="b7" class="bubble twelfth c1"></div>
+    <div id="b8" class="bubble twelfth c2"></div>
+    <div id="b9" class="bubble twelfth c3"></div>
+    <p>I feel restless. Sleep evades me even when I feel tired.</p>
+    <div id="b7" class="bubble thirteenth c1"></div>
+    <div id="b8" class="bubble thirteenth c2"></div>
+    <div id="b9" class="bubble thirteenth c3"></div>
+    <p>I constantly find myself eating, even when I’m not hungry.</p>
+    <div id="b7" class="bubble fourteenth c1"></div>
+    <div id="b8" class="bubble fourteenth c2"></div>
+    <div id="b9" class="bubble fourteenth c3"></div>
+    <p>I am sleeping more than 9 hours a day regularly. I can’t find the energy to do much else.</p>
+    <div id="b7" class="bubble fifteenth c1"></div>
+    <div id="b8" class="bubble fifteenth c2"></div>
+    <div id="b9" class="bubble fifteenth c3"></div>
+    <p>I can’t convince myself to accomplish anything, even things like maintaining hygiene.</p>
+    <div id="b7" class="bubble sixteenth c1"></div>
+    <div id="b8" class="bubble sixteenth c2"></div>
+    <div id="b9" class="bubble sixteenth c3"></div>
+    <div class="inst-box"> <p class="instructions">If true, please fill in the bubble below the statement:</p></div>
+    <br>
+    <p>I have considered self harm or have purposely injured myself.</p>
+    <div id="self-harm" class="bubble seventeenth c1 flag"></div>
+    <p>I have considered suicide.</p>
+    <div id="suicide" class="bubble eighteenth c1 flag"></div>
+    <br>
     <button id="assess-submit">submit</button>
+    </main>
   <section>
 
 <div id="modal-bg">
 
   <div id="modal-content">
     <h1>Thanks for filling that out!</h1>
-    <p id="box1"></p>
-    <p id="box2"></p>
-    <p id="box3"></p>
-    <p id="box4"></p>
-    <button id="close-modal">close</button>
+
   </div>
 
 </div>
