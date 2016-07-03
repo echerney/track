@@ -7,14 +7,19 @@
 
 body {
   background-color: white;
-  text-align: center;
   font-family: helvetica;
 }
 
 section {
   width:70%;
+  text-align: center;
 }
 
+.logo {
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 22px;
+}
 
 
 /*HOME PAGE*/
@@ -28,6 +33,9 @@ section {
   /*display:inline;
 */}
 
+h2 {
+  font-size:20px;
+}
 
 /*ASSESSMENT PAGE*/
 
@@ -57,12 +65,14 @@ section {
 }
 
 #modal-content {
+    overflow: scroll;
     background-color: rgb(224,245,245);
     margin: 40px auto;
     padding: 20px;
     border: 1px solid black;
     width: 80%;
     height: 80%;
+    border-radius:2%;
 }
 
 .help-button{
@@ -73,7 +83,17 @@ section {
   width: 150px;
   font-size:17px;
   border-radius: 8%;
+  margin: 60px;
+}
+
+.added {
   margin: 20px;
+}
+
+.flagged-content {
+  text-align: center;
+  margin: 20px 60px;
+  line-height: 150%;
 }
 
 #close-modal{
@@ -89,11 +109,17 @@ section {
 
 .title{
   font-size: 30px;
-  padding: 40px 0 20px 0;
+  padding: 25px 0 20px 0;
+  text-align: center;
 }
 
 main p {
   margin: 20px;
+}
+
+.results{
+  width: 70%;
+  text-align: center;
 }
 
 #assess-submit{
@@ -118,14 +144,107 @@ main p {
   margin-top: 10px;
 }
 
+.forks {
+  height: 60px;
+  position: relative;
+  top:-10px;
+  left: -10px;
+}
+
+.shower {
+  height: 50px;
+  position: relative;
+  top:-9px;
+  left: -9px;
+}
+
+.bed {
+  height: 50px;
+  position: relative;
+  top:-10px;
+  left: -7px;
+}
+
+.ring{
+  margin: 15px auto;
+  border: black 2px solid;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  postion: relative;
+}
+
+
+
+
+/*HELP PAGE*/
+.facility-link {
+  text-decoration: underline;
+}
+
+#zipcode {
+  font-size: 17px;
+  height: 25px;
+  display: inline-block;
+  bottom: 40px;
+}
+
+#submit-zip{
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 35px;
+  width: 85px;
+  font-size:17px;
+  border-radius: 8%;
+  margin: 20px;
+}
+
+
+
+/*CREATE USER PAGE*/
+
+.new-user{
+  background-color: rgba(120,205,205, 0.3);
+}
+
+
+.new-main {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+
+}
+
+.new-input {
+  height: 20px;
+  width: 150px;
+  margin: 10px;
+}
+
+.new-button {
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 50px;
+  width: 150px;
+  font-size:17px;
+  border-radius: 8%;
+  margin: 30px;
+}
+
+
+
+
 /*NAVBAR STUFF*/
 
 #navbar {
-height: 100vh;
-position: fixed;
-width: 30%;
-background-color: rgb(120,205,205);
-right: 0;
+  text-align: center;
+  height: 100vh;
+  position: fixed;
+  width: 30%;
+  background-color: rgb(120,205,205);
+  right: 0;
 }
 
 .nav-hide {
@@ -152,11 +271,6 @@ a {
   font-size:17px;
   border-radius: 8%;
   margin: 20px;
-}
-
-.login{
-  top:10px;
-  position: relative;
 }
 
 .nav-button:hover{
