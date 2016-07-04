@@ -1,6 +1,9 @@
 {
   "name": "sadtracker",
   "version": "1.0.0",
+ "engines": {
+    "node": "6.2.1"
+  },
   "description": "Keep track of your symptoms and get help when you need it!",
   "main": "app.js",
   "scripts": {
