@@ -6,7 +6,6 @@ router.get('/new', function(req, res) {
 })
 
 router.post('/new', createUser, loginUser, function(req, res) {
-  console.log(req.body);
   req.session.user = res.user;
   req.session.save(function(err){
     if(err) throw err

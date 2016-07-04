@@ -28,7 +28,6 @@ $(document).ready(function() {
     } else {
       checkFlags();
       getScore();
-      console.log(getScore())
       fillModal();
       $('#modal-bg').toggle();
     }
