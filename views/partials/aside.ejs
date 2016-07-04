@@ -3,7 +3,7 @@
     <h2 id="user-label">
     <% if(user){ %>
       Welcome, <%= user.fname %> <%= user.lname %>
-      </h2><a href='/user/new'><button class="nav-button">Take Assessment</button></a><br>
+      </h2><a href='/assess'><button class="nav-button">Take Assessment</button></a><br>
     <% } %>
 <% if(user){ %>
     <form action="/user/logout?_method=DELETE" method='post'>
