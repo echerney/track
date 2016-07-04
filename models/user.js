@@ -1,7 +1,7 @@
 //this info pulled from Bobby's authentication lesson.
 
 const { MongoClient } = require('mongodb');
-const dbConnection = 'mongodb://localhost:27017/tracker';
+const dbConnection = process.env['MONGODB_URI'] || 'mongodb://localhost:27017/tracker';
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSalt(10);
 
