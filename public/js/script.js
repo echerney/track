@@ -42,6 +42,7 @@ $(document).ready(function() {
 
   //fill model with suggestion to seek help and a link to the find help page
   function produceHelpLink() {
+    $('.added').remove();
     $('#modal-content').append(
       '<p class="flagged-content">It looks like you are having a really hard time right now. Please let us put you in touch with some mental health professionals to get you the help you need!</p> <a href="./help"><button class="help-button">Find Help</button></a>'
       );
