@@ -5,17 +5,21 @@
 </head>
 <body>
 <% include ../partials/aside %>
+<a href="/" class="logo">Tracker</a>
 <section>
-  <h1>
+  <h1 class="title">
   Find help!
-    <% if(user){ %>
-    Welcome, <%= user.fname %> <%= user.lname %>
-    <% } else { %>
-    Welcome to Tracker
-    <% } %>
   </h1>
-  <input id="zipcode" type="text" placeholder="zip code">
-  <button id="submit-zip">submit</button>
+  <main>
+    <input id="zipcode" type="text" placeholder="zip code">
+    <button id="submit-zip">submit</button>
+    <article class="help-inst">
+      <div class="inst-box">
+      <p>Type in your zip code to find local mental health facilities. Click on the name of each facility to be brought to their website.</p>
+      </div>
+    </article>
+  </main>
+  <div class="results"></div>
 </section>
 </body>
 </html>

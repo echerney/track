@@ -3,14 +3,13 @@
     <h2 id="user-label">
     <% if(user){ %>
       Welcome, <%= user.fname %> <%= user.lname %>
+      </h2><a href='/user/new'><button class="nav-button">Take Assessment</button></a><br>
     <% } %>
-    </h2>
 <% if(user){ %>
     <form action="/user/logout?_method=DELETE" method='post'>
-      <input class="nav-button" type="submit" value="logout">
+      <input class="nav-button" type="submit" value="Logout">
     </form>
     <% } else { %>
-    <div class="login">
       <a href='/user/new'><button class="nav-button">Create Account</button></a><br>
       <button id="show-nav" class="nav-button">Login</button>
       <form action="/user/login" method='post'>
@@ -20,7 +19,6 @@
         <input class="nav-hide nav-input" type="password" name='password'><br>
         <input class="nav-hide nav-button" type="submit" value='Login'>
       </form>
-    </div>
   <% } %>
   </div>
 </aside>
