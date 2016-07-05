@@ -4,6 +4,9 @@ This app (yet to be named, but for now called Tracker) is going to be a tracking
 I created this app in order for people with depression or depressive symptoms to be able to track their symptoms and find a nearby mental heath care facility when necessary. On the home page the user is given instructions to either login and make their way to the assessment, create an account or if necessary, go direction to the find help page. I wanted the find help page to be outside the need for user login so that they can quickly navigate to the page if necessary. After logging in the user is given the assessment, which will pop up a modal at the end with different suggestions dependent on their score. The questions and assessment are pulled from <a href="http://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/beck-depression.aspx">Beck's Depression Inventory</a>, which is a standard assessment within clincical psychology. The app will suggest different coping skills for users dependent on the answers to their assessment which I pulled from <a href="http://www.everydayhealth.com/hs/major-depression-living-well/cognitive-behavioral-therapy-techniques/">this article</a> on the topic. All icons on the results modal are from http://icons.iconarchive.com. The font used is <a href="https://fonts.google.com/specimen/Raleway?query=raleway">Raleway</a> from Google fonts. I relied on Bobby's lesson on authentication for a lot of the user login function on the app. I used <a href="http://www.w3schools.com/howto/howto_css_modals.asp">this resource</a> on building modals, Bobby's lesson on authentication for user login and a lot of support from Fizal.
 
 
+##Flow Chart:
+<img src="https://github.com/echerney/track/blob/master/Blank%20Flowchart%20-%20New%20Page.png?raw=true">
+
 
 ##User Stories:
 -As a user with mild depressive symptoms, I want to be able to quantify my symptoms at the recommendation of my behavioral health practitioner.</br>
