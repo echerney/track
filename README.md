@@ -15,6 +15,9 @@ I created this app in order for people with depression or depressive symptoms to
 -As a user experiencing severe depression symptoms I want to be able to find nearby mental health facilities without even logging in, if necessary.</br>
 -As a user with moderate depression, I want to know when my symptoms are dangerous and see nearby mental health facilities.</br>
 
+##Reflection on user stories and wire frames:
+The only major thing that changed from the wire frame is my get help page. On that page I prioritized asthetic aspects, like being able to click on the summary on the left and have all the information show up on the right. Instead I'd choose to skip that feature and have a map on the left and list of 5 closest facilities on the right bar. From the user stories, I chose not to build out the medicine reminder feature because I couldn't find a simple way to make timed alerts. 
+
 
 ##Wire frames:
 <img src="https://github.com/echerney/track/blob/master/Screen%20Shot%202016-06-28%20at%2010.35.44%20PM.png?raw=true">
