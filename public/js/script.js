@@ -177,17 +177,22 @@ $(document).ready(function() {
       success: function(data){
         const $body = $('body');
         let $div = $('.results');
-        data.forEach(function(facility){
-          let $name1 = $('<h3 class="facility-link">').html('<a href="'+facility.website+'">'+facility.name_1+'</a>');
-          $div.append($name1);
-          let $name2 = $('<p>').text(facility.name_2);
-          $div.append($name2);
-          let $phone = $('<p>').text('Phone Number: '+facility.phone)
-          $div.append($phone);
-          let $city = $('<p>').html(facility.city+', NY<br><br>');
-          $div.append($city);
-        });
+        if (data) {
+          data.forEach(function(facility){
+            let $name1 = $('<h3 class="facility-link">').html('<a href="'+facility.website+'">'+facility.name_1+'</a>');
+            $div.append($name1);
+            let $name2 = $('<p>').text(facility.name_2);
+            $div.append($name2);
+            let $phone = $('<p>').text('Phone Number: '+facility.phone)
+            $div.append($phone);
+            let $city = $('<p>').html(facility.city+', NY<br><br>');
+            $div.append($city);
+          });
+          $body.append($div);
+        } else {
+        $div.append("No results found");
         $body.append($div);
+        }
       }
     })
   });
