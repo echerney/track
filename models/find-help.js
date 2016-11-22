@@ -8,7 +8,6 @@ function getFacilityData(req,res,next) {
     url: 'https://data.cityofnewyork.us/resource/8nqg-ia7v.json?',
     method: 'get',
     qs: {
-      facility_type: 'MH',
       zip: req.query.zip,
     },
     json:true
