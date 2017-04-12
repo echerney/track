@@ -177,7 +177,7 @@ $(document).ready(function() {
       success: function(data){
         const $body = $('body');
         let $div = $('.results');
-        if (data) {
+        if (data.length < 0) {
           data.forEach(function(facility){
             let $name1 = $('<h3 class="facility-link">').html('<a href="'+facility.website+'">'+facility.name_1+'</a>');
             $div.append($name1);
