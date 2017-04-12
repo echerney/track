@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')))
 
 app.listen(port, function(){
-  console.log('Server is listening on port', port);
+  console.log('I have the honor to be your obedient server,', port);
 });
 
 //ROUTES

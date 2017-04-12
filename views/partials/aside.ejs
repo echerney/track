@@ -3,6 +3,9 @@
     <h2 id="user-label">
     <% if(user){ %>
       Welcome, <%= user.fname %> <%= user.lname %>
+      <% if (user.score) { %>
+        Your last score was <%= user.score %>
+      <% } %>
       </h2><a href='/assess'><button class="nav-button">Take Assessment</button></a><br>
     <% } %>
 <% if(user){ %>
