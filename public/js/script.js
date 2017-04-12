@@ -103,11 +103,11 @@ $(document).ready(function() {
 
   //conditionals to fill modal with content
   function fillModal(){
-    if (getScore() < 5){
+    if (getScore() < 3){
       $('#modal-content').append('<p class="added">You might just be the happiest person to ever exist.</p>');
       addModalButton();
       // $('#modal-bg').toggle();
-    } else if (getScore() < 21){
+    } else if (getScore() < 15){
       $('#modal-content').append('<p class="added">'+randomThought()+'</p>');
       addModalButton();
       // $('#modal-bg').toggle();
