@@ -44,13 +44,13 @@ $(document).ready(function() {
   function produceHelpLink() {
     $('.added').remove();
     $('#modal-content').append(
-      '<p class="flagged-content">It looks like you are having a really hard time right now. Please let us put you in touch with some mental health professionals to get you the help you need!</p> <a href="./help"><button class="help-button">Find Help</button></a>'
+      '<p class="flagged-content">It looks like you are having a really hard time right now. Please let us put you in touch with some mental health professionals to get you the help you need!</p> <a href="./help"><button class="short-button help-button">Find Help</button></a>'
       );
   };
 
   //adds the close button to the model
   function addModalButton() {
-    $('#modal-content').append('<button class="added" id="close-modal">close</button>');
+    $('#modal-content').append('<button class="added short-button" id="close-modal">close</button>');
     $('#close-modal').click(function(){
       $('#modal-bg').hide();
   });
@@ -175,10 +175,12 @@ $(document).ready(function() {
       dataType: 'json',
       data: {zip: zipInput},
       success: function(data){
+        console.log(data.length)
         const $body = $('body');
         let $div = $('.results');
-        if (data.length < 0) {
+        if (data.length > 0) {
           data.forEach(function(facility){
+            $div.empty();
             let $name1 = $('<h3 class="facility-link">').html('<a href="'+facility.website+'">'+facility.name_1+'</a>');
             $div.append($name1);
             let $name2 = $('<p>').text(facility.name_2);
@@ -190,8 +192,10 @@ $(document).ready(function() {
           });
           $body.append($div);
         } else {
-        $div.append("No results found");
-        $body.append($div);
+          $div.empty();
+          console.log("no results")
+          $div.append("No results found");
+          $body.append($div);
         }
       }
     })

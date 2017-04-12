@@ -4,21 +4,21 @@
 <% include ../partials/head %>
 </head>
 <body class="new-user">
-    <a href="/" class="logo">Tracker</a>
-    <h1 class="title">Come on in!</h1>
-    <main class="new-main">
-        <form action "/user/new" method="post">
-            <label for="">First Name:</label>
-            <input class="new-input" type="text" name="fname"><br>
-            <label for="">Last Name:</label>
-            <input class="new-input" type="text" name="lname"><br>
-            <label for="">Email:</label>
-            <input class="new-input" type="text" name="email"><br>
-            <label for="">Password:</label>
-            <input class="new-input" type="password" name="password"><br>
-            <input class = "new-button" type="Submit" value="Create New User">
-        </form>
+  <div class="logo">
+    <a href="/">Tracker</a>
+  </div>
+    <h1>Come on in!</h1>
+    <main>
+      <form action "/user/new" method="post">
+        <label for="">First Name:</label>
+        <input type="text" name="fname"><br>
+        <label for="">Last Name:</label>
+        <input type="text" name="lname"><br>
+        <label for="">Email:</label>
+        <input type="text" name="email"><br>
+        <label for="">Password:</label>
+        <input type="password" name="password"><br>
+        <input class="short-button" type="Submit" value="Create New User">
     </main>
-
 </body>
 </html>

@@ -1,40 +1,129 @@
 
-/*---------GLOBALS----------*/
+/*---------------GLOBALS---------------*/
 html {
   font-size: 18px;
-  margin: 0;
   font-family: 'Raleway', sans-serif;
   background-color: #FFF;
+  text-align:center;
 }
 
-section {
-  width:70%;
-  text-align: center;
+body {
+  margin:0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .logo {
   text-align: left;
-  padding: 12px 20px;
-  font-size: 22px;
 }
 
-
-/*HOME PAGE*/
-.greeting {
-  padding: 80px;
-  font-size: 40px;
+.logo a {
+  font-size:22px;
+  padding:5px;
 }
 
-.intro {
-  margin: 0 60px;
-  /*display:inline;
-*/}
+.l-section {
+  left:0;
+  width:70%;
+}
+
+.r-section {
+  right:0;
+  width:30%;
+  position:fixed;
+  background-color: rgb(120,205,205);
+  height:100%;
+  z-index:5;
+  top:0;
+}
+
+input {
+  -webkit-appearance:none;
+  border-radius: 0;
+  border:none;
+  background-color: rgba(0,0,0,0.1);
+  width: 260px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  margin: 10px 0;
+  height:34px;
+  cursor:none;
+}
+
+input:focus {
+  caret-color: transparent;
+  -webkit-appearance:none;
+  cursor:none;
+  outline:none;
+  background-color: rgba(0,0,0,0.4);
+}
+
+label {
+  padding: 10px;
+}
+
+.long-button {
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 55px;
+  padding: 5px 0;
+  width: 215px;
+  font-size:18px;
+  border-radius: 8%;
+  margin-top: 40px;
+}
+
+.short-button {
+  border-color: darkslategray;
+  background-color: white;
+  color: darkslategray;
+  height: 55px;
+  padding: 5px 36px;
+  border-radius: 8%;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+
+button:hover{
+  background-color: lightgray;
+}
+
+h1 {
+  font-size: 50px;
+}
 
 h2 {
-  font-size:20px;
+  font-size: 25px;
 }
 
-/*ASSESSMENT PAGE*/
+p {
+  font-size: 18px;
+}
+
+/*---------------HOME PAGE---------------*/
+
+.homepage main {
+  padding: 0 20px;
+}
+
+.homepage h1 {
+  margin-top: 15vh;
+}
+
+.homepage h2 {
+  margin-bottom: 5vh;
+}
+
+.homepage button {
+  margin-top: 30px;
+}
+
+
+/*---------------ASSESSMENT---------------*/
 
 .bubble {
   height: 25px;
@@ -59,6 +148,7 @@ h2 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    z-index:6;
 }
 
 #modal-content {
@@ -67,20 +157,9 @@ h2 {
     margin: 40px auto;
     padding: 20px;
     border: 1px solid black;
-    width: 80%;
+    width: 75%;
     height: 80%;
     border-radius:2%;
-}
-
-.help-button{
-  border-color: darkslategray;
-  background-color: white;
-  color: darkslategray;
-  height: 55px;
-  width: 150px;
-  font-size:17px;
-  border-radius: 8%;
-  margin: 60px;
 }
 
 .added {
@@ -93,41 +172,9 @@ h2 {
   line-height: 150%;
 }
 
-#close-modal{
-  border-color: darkslategray;
-  background-color: white;
-  color: darkslategray;
-  font-size:17px;
-  height: 35px;
-  width: 75px;
-  border-radius: 8%;
-  margin: 20px;
-}
-
-.title{
-  font-size: 30px;
-  padding: 25px 0 20px 0;
-  text-align: center;
-}
-
-main p {
-  margin: 20px;
-}
-
 .results{
   width: 70%;
   text-align: center;
-}
-
-#assess-submit{
-  border-color: darkslategray;
-  background-color: white;
-  color: darkslategray;
-  height: 45px;
-  width: 80px;
-  font-size:17px;
-  border-radius: 8%;
-  margin: 20px;
 }
 
 .instructions {
@@ -174,110 +221,44 @@ main p {
 
 
 
-/*HELP PAGE*/
+/*---------------FIND HELP---------------*/
 .facility-link {
   text-decoration: underline;
 }
 
-#zipcode {
-  font-size: 17px;
-  height: 25px;
-  display: inline-block;
-  bottom: 40px;
-}
-
-#submit-zip{
-  border-color: darkslategray;
-  background-color: white;
-  color: darkslategray;
-  height: 35px;
-  width: 85px;
-  font-size:17px;
-  border-radius: 8%;
-  margin: 20px;
+#submit-zip {
+  height: 34px;
 }
 
 
 
-/*CREATE USER PAGE*/
-
-.new-user{
+/*---------------CREATE USER---------------*/
+.new-user {
   background-color: rgba(120,205,205, 0.3);
-}
-
-
-.new-main {
-  text-align: center;
-  margin: 20px;
-  font-size: 20px;
-
-}
-
-.new-input {
-  height: 20px;
-  width: 150px;
-  margin: 10px;
-}
-
-.new-button {
-  border-color: darkslategray;
-  background-color: white;
-  color: darkslategray;
-  height: 50px;
-  width: 150px;
-  font-size:17px;
-  border-radius: 8%;
-  margin: 30px;
-}
-
-
-
-
-/*NAVBAR STUFF*/
-
-#navbar {
-  text-align: center;
   height: 100vh;
-  position: fixed;
-  width: 30%;
-  background-color: rgb(120,205,205);
-  right: 0;
+  width: 100vw;
 }
+
+input.short-button {
+  margin-top: 40px;
+}
+
+
+/*---------------SIDE BAR---------------*/
+
 
 .nav-hide {
   display: none;
   margin: 5px;
 }
 
-.nav-input {
-  height: 20px;
-  border-radius: 8%;
+.nav {
+  margin-top: 40px;
+}
+.nav input{
+  margin-bottom:40px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-button{
-  border-color: darkslategray;
-  background-color: white;
-  color: darkslategray;
-  height: 55px;
-  width: 60%;
-  font-size:17px;
-  border-radius: 8%;
-  margin: 20px;
-}
-
-.nav-button:hover{
-  background-color: lightgray;
-}
-
-.nav-label{
-  color: darkslategray;
-  font-weight: bolder;
-}
 
 #user-label {
   margin: 40px;

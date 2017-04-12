@@ -1,27 +1,25 @@
-<aside>
-  <div id="navbar">
-    <h2 id="user-label">
-    <% if(user){ %>
-      Welcome, <%= user.fname %> <%= user.lname %>
-      <% if (user.score) { %>
-        Your last score was <%= user.score %>
-      <% } %>
-      </h2><a href='/assess'><button class="nav-button">Take Assessment</button></a><br>
+<section class="r-section" id="navbar">
+  <h2 id="user-label">
+  <% if(user){ %>
+    Welcome, <%= user.fname %> <%= user.lname %>
+    <% if (user.score) { %>
+      Your last score was <%= user.score %>
     <% } %>
-<% if(user){ %>
-    <form action="/user/logout?_method=DELETE" method='post'>
-      <input class="nav-button" type="submit" value="Logout">
-    </form>
-    <% } else { %>
-      <a href='/user/new'><button class="nav-button">Create Account</button></a><br>
-      <button id="show-nav" class="nav-button">Login</button>
-      <form action="/user/login" method='post'>
-        <label class="nav-hide nav-label" for="">Email:</label>
-        <input class="nav-hide nav-input" type="text" name='email'><br>
-        <label class="nav-hide nav-label" for="">Password:</label>
-        <input class="nav-hide nav-input" type="password" name='password'><br>
-        <input class="nav-hide nav-button" type="submit" value='Login'>
-      </form>
+    </h2><a href='/assess'><button class="long-button">Take Assessment</button></a><br>
   <% } %>
-  </div>
-</aside>
+<% if(user){ %>
+  <form action="/user/logout?_method=DELETE" method='post'>
+    <input class="long-button" type="submit" value="Logout">
+  </form>
+  <% } else { %>
+    <a href='/user/new'><button class="long-button">Create Account</button></a><br>
+    <button id="show-nav" class="long-button">Login</button>
+    <form class="nav" action="/user/login" method='post'>
+      <label class="nav-hide" for="">Email:</label>
+      <input class="nav-hide" type="text" name='email'><br>
+      <label class="nav-hide" for="">Password:</label>
+      <input class="nav-hide" type="password" name='password'><br>
+      <input class="nav-hide long-button" type="submit" value='Login'>
+    </form>
+<% } %>
+</section>
