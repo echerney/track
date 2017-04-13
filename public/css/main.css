@@ -40,7 +40,7 @@ a {
   top:0;
 }
 
-input {
+input:not([type=submit]){
   -webkit-appearance:none;
   border-radius: 0;
   border:none;
@@ -49,11 +49,12 @@ input {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
   margin: 10px 0;
+  padding-left:4px;
   height:34px;
   cursor:none;
 }
 
-input:focus {
+input:focus{
   caret-color: transparent;
   -webkit-appearance:none;
   cursor:none;
