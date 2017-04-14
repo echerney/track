@@ -269,7 +269,7 @@ input.short-button {
 
 /*---------------MOBILE---------------*/
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 1000px) {
   .bubble {
     height: 100px;
     width: 100px;
