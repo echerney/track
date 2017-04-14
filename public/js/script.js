@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 //NAVBAR
   //toggle function to hide login until button pressed
-  $('#show-nav').click(function(){
+  $('#show-nav').on('click touch', function(){
     $('.nav-hide').fadeIn();
     $('#show-nav').hide();
   });
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 //ASSESSMENTS
   //on click, get the results of the assessment
-  $('#assess-submit').click(function(){
+  $('#assess-submit').on('click touch', function(){
     if($('.flag').hasClass('marked')) {
       produceHelpLink();
       $('#modal-bg').toggle();
@@ -51,7 +51,7 @@ $(document).ready(function() {
   //adds the close button to the model
   function addModalButton() {
     $('#modal-content').append('<button class="added short-button" id="close-modal">close</button>');
-    $('#close-modal').click(function(){
+    $('#close-modal').on('click touch', function(){
       $('#modal-bg').hide();
   });
   };
@@ -124,7 +124,7 @@ $(document).ready(function() {
   }
 
   //filling bubbles
-  $('.bubble').click(function(){
+  $('.bubble').on('click touch', function(){
     let clickedRow = this.classList[1]
     let clickedColumn = this.classList[2]
     if(clickedColumn === 'c3' ){
@@ -166,7 +166,7 @@ $(document).ready(function() {
 //HELP PAGE
 
   //call to the api for specified zip code and populate list of places
-  $('#submit-zip').click(findHelp);
+  $('#submit-zip').on('click touch', findHelp);
   $('#zipcode').keydown(function(event) {
     if (event.keyCode == 13) {
       findHelp();
