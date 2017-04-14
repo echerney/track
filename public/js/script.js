@@ -202,7 +202,7 @@ $(document).ready(function() {
         } else {
           $div.empty();
           console.log("no results")
-          $div.append("No results found");
+          $div.append("No results found. Please try another nearby zip code in the NYC area.");
           $body.append($div);
         }
       }

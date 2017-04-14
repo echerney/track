@@ -184,7 +184,7 @@ p {
 
 .inst-box {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   background-color: rgba(120,205,205, 0.3);
   margin-top: 10px;
 }
@@ -264,4 +264,14 @@ input.short-button {
 #user-label {
   margin: 40px;
   font-family: 'Raleway Dots', cursive;
+}
+
+
+/*---------------MOBILE---------------*/
+
+@media screen and (max-width : 768px) {
+  .bubble {
+    height: 100px;
+    width: 100px;
+  }
 }
