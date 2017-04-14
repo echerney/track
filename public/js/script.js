@@ -166,7 +166,14 @@ $(document).ready(function() {
 //HELP PAGE
 
   //call to the api for specified zip code and populate list of places
-  $('#submit-zip').click(function(){
+  $('#submit-zip').click(findHelp);
+  $('#zipcode').keydown(function(event) {
+    if (event.keyCode == 13) {
+      findHelp();
+    }
+});
+
+  function findHelp(){
     $('.help-inst').fadeOut('300');
     let zipInput = $('#zipcode').val();
     $.ajax({
@@ -179,8 +186,9 @@ $(document).ready(function() {
         const $body = $('body');
         let $div = $('.results');
         if (data.length > 0) {
+          console.log(data)
+          $div.empty();
           data.forEach(function(facility){
-            $div.empty();
             let $name1 = $('<h3 class="facility-link">').html('<a href="'+facility.website+'">'+facility.name_1+'</a>');
             $div.append($name1);
             let $name2 = $('<p>').text(facility.name_2);
@@ -199,7 +207,7 @@ $(document).ready(function() {
         }
       }
     })
-  });
+  }
 
 });
 
