@@ -105,6 +105,30 @@ p {
   font-size: 18px;
 }
 
+#modal-bg {
+  display:none;
+  position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    z-index:6;
+}
+
+#modal-content {
+    overflow: scroll;
+    background-color: rgb(224,245,245);
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 75%;
+    height: 80%;
+    border-radius:2%;
+}
+
 /*---------------HOME PAGE---------------*/
 
 .homepage main {
@@ -139,30 +163,6 @@ p {
   background-color: rgb(120,205,205);
 }
 
-#modal-bg {
-  display:none;
-  position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    z-index:6;
-}
-
-#modal-content {
-    overflow: scroll;
-    background-color: rgb(224,245,245);
-    margin: 40px auto;
-    padding: 20px;
-    border: 1px solid black;
-    width: 75%;
-    height: 80%;
-    border-radius:2%;
-}
-
 .added {
   margin: 20px;
 }
@@ -180,6 +180,7 @@ p {
 
 .instructions {
   font-weight: bolder;
+  padding-right: 35px;
 }
 
 .inst-box {
