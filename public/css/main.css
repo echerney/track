@@ -129,6 +129,18 @@ p {
     border-radius:2%;
 }
 
+.instructions {
+  font-weight: bolder;
+  padding-right: 35px;
+}
+
+.inst-box {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(120,205,205, 0.3);
+  margin-top: 10px;
+}
+
 /*---------------HOME PAGE---------------*/
 
 .homepage main {
@@ -176,18 +188,6 @@ p {
 .results{
   width: 70%;
   text-align: center;
-}
-
-.instructions {
-  font-weight: bolder;
-  padding-right: 35px;
-}
-
-.inst-box {
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(120,205,205, 0.3);
-  margin-top: 10px;
 }
 
 .forks {
